@@ -1,6 +1,6 @@
 <div>
-  <h1> {{text}} </h1>
-  <button class="btn btn-primary"(click)="mostrarBoton()">
+  <h1>{{text}}</h1>
+  <button class="btn btn-primary" (click)="mostrarBoton()">
     {{bandera ? "Ocultar" : "Mostrar"}}
   </button>
   <table class="table" *ngIf="articulos && articulos.length && bandera">
@@ -12,14 +12,17 @@
         <th>
           NOMBRE
         </th>
+        <th>
+          PUNTAJE
+        </th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let articulo of articulos">
         <td>{{articulo.id}}</td>
         <td>{{articulo.nombre | uppercase}}</td>
+        <td><app-puntaje [puntaje]="articulo.puntaje"></app-puntaje></td>
       </tr>
-
     </tbody>
   </table>
 </div>
