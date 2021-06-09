@@ -1,9 +1,9 @@
 <div>
   <h1> {{text}} </h1>
-  <button (click)="mostrarBoton()">
+  <button class="btn btn-primary"(click)="mostrarBoton()">
     {{bandera ? "Ocultar" : "Mostrar"}}
   </button>
-  <table *ngIf="articulos && articulos.length && bandera">
+  <table class="table" *ngIf="articulos && articulos.length && bandera">
     <thead>
       <tr>
         <th>
