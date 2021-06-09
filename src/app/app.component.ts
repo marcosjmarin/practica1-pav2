@@ -12,11 +12,13 @@ export class AppComponent {
   articulos: any[] = [
     {
       id: 2,
-      nombre: 'Articulo X'
+      nombre: 'Articulo X',
+      puntaje: 5
     },
     {
       id: 5,
-      nombre: 'Articulo Y'
+      nombre: 'Articulo Y',
+      puntaje: 3
     }
   ];
   mostrarBoton(): void {
