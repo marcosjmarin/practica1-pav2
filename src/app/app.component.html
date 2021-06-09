@@ -1,6 +1,22 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-  <br />
-  {{text}}
-</p>
+<div>
+  <h1> {{text}} </h1>
+  <table *ngIf="articulos && articulos.length">
+    <thead>
+      <tr>
+        <th>
+          Id
+        </th>
+        <th>
+          Nombre
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let articulo of articulos">
+        <td>{{articulo.id}}</td>
+        <td>{{articulo.nombre}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
