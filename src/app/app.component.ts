@@ -8,6 +8,7 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
   text = 'Listado Articulos';
+  bandera = true;
   articulos: any[] = [
     {
       id: 2,
@@ -18,4 +19,7 @@ export class AppComponent {
       nombre: 'Articulo Y'
     }
   ];
+  mostrarBoton(): void {
+    this.bandera = !this.bandera;
+  }
 }

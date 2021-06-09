@@ -1,20 +1,23 @@
 <div>
   <h1> {{text}} </h1>
-  <table *ngIf="articulos && articulos.length">
+  <button (click)="mostrarBoton()">
+    {{bandera ? "Ocultar" : "Mostrar"}}
+  </button>
+  <table *ngIf="articulos && articulos.length && bandera">
     <thead>
       <tr>
         <th>
-          Id
+          ID
         </th>
         <th>
-          Nombre
+          NOMBRE
         </th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let articulo of articulos">
         <td>{{articulo.id}}</td>
-        <td>{{articulo.nombre}}</td>
+        <td>{{articulo.nombre | uppercase}}</td>
       </tr>
 
     </tbody>
