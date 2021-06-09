@@ -24,4 +24,7 @@ export class AppComponent {
   mostrarBoton(): void {
     this.bandera = !this.bandera;
   }
+  onPuntajeClicked(mensaje: string): void {
+    this.text = 'Lista de Artículos - ' + mensaje;
+  }
 }

@@ -21,7 +21,12 @@
       <tr *ngFor="let articulo of articulos">
         <td>{{articulo.id}}</td>
         <td>{{articulo.nombre | uppercase}}</td>
-        <td><app-puntaje [puntaje]="articulo.puntaje"></app-puntaje></td>
+        <td>
+          <app-puntaje
+            [puntaje]="articulo.puntaje"
+            (puntajeClicked)="onPuntajeClicked($event)"
+          ></app-puntaje>
+        </td>
       </tr>
     </tbody>
   </table>
