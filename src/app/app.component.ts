@@ -7,4 +7,5 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
+  text = 'A ver ahora la concha de tu madre'
 }
