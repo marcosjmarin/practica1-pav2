@@ -18,11 +18,11 @@ import { DetalleComponent } from './detalle/detalle/detalle.component';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: 'articulos', component: ListaArticulosComponent },
-      { path: 'articulo/:id', component: DetalleComponent },
-      { path: 'inicio', component: InicioComponent },
-      { path: '', redirectTo: 'inicio', pathMatch: 'full' },
-      { path: '**', component: PaginaNoEncontradaComponent }
+      //{ path: 'articulos', component: ListaArticulosComponent },
+      { path: 'articulo/:id', component: DetalleComponent }
+      //{ path: 'inicio', component: InicioComponent },
+      //{ path: '', redirectTo: 'inicio', pathMatch: 'full' },
+      //{ path: '**', component: PaginaNoEncontradaComponent }
     ])
   ],
   bootstrap: [AppComponent]
