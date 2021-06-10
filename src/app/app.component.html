@@ -1,33 +1,7 @@
-<div>
-  <h1>{{text}}</h1>
-  <button class="btn btn-primary" (click)="mostrarBoton()">
-    {{bandera ? "Ocultar" : "Mostrar"}}
-  </button>
-  <table class="table" *ngIf="articulos && articulos.length && bandera">
-    <thead>
-      <tr>
-        <th>
-          ID
-        </th>
-        <th>
-          NOMBRE
-        </th>
-        <th>
-          PUNTAJE
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let articulo of articulos">
-        <td>{{articulo.id}}</td>
-        <td>{{articulo.nombre | uppercase}}</td>
-        <td>
-          <app-puntaje
-            [puntaje]="articulo.puntaje"
-            (puntajeClicked)="onPuntajeClicked($event)"
-          ></app-puntaje>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <a class="navbar-brand">{{text}}</a>
+  <ul class="nav nav-pills">
+    <li><a class="nav-link">Inicio</a></li>
+    <li><a class="nav-link">Lista Artículos</a></li>
+  </ul>
+</nav>
